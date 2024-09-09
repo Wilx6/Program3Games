@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 382c846cb8391ab4d9079adb1d4321c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flickeringText: {fileID: 14009777}
+  flickeringText: {fileID: 0}
   flickerSpeed: 3
 --- !u!114 &14009777
 MonoBehaviour:
@@ -744,8 +744,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 865378037}
-  - {fileID: 660373528}
   - {fileID: 14009775}
+  - {fileID: 660373528}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
