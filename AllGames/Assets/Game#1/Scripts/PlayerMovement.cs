@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
+
+    GameMechanic gm;
+    [SerializeField] GameObject BOF;
 
     private Rigidbody2D rb;
     public float jump;
@@ -12,10 +16,14 @@ public class PlayerMovement : MonoBehaviour
 
     public bool grounded = true;
 
+    private Renderer rend;
+
     // Start is called before the first frame update
     void Start()
     {
+        gm = BOF.GetComponent<GameMechanic>();
 
+        rend = GetComponent<Renderer>();
 
         rb = GetComponent<Rigidbody2D>();
 
@@ -34,6 +42,15 @@ public class PlayerMovement : MonoBehaviour
             rb.AddForce(new Vector2(rb.velocity.y, jump));
         }
 
+        if (gm.BOnOff == true)
+        {
+            rend.material.color = Color.black;
+        }
+
+        if (gm.BOnOff == false)
+        {
+            rend.material.color = Color.white;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -46,6 +63,24 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.tag == "BGround")
         {
             grounded = true;
+        }
+        
+        if (other.gameObject.tag == "Safe")
+        {
+            grounded = true;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Death1")
+        {
+            SceneManager.LoadScene(1);
+        }
+
+        if(other.tag == "Win1")
+        {
+            SceneManager.LoadScene(2);
         }
     }
 }
