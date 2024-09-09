@@ -12,6 +12,10 @@ TagManager:
   - Death1
   - Win1
   - Safe
+  - Win2
+  - Death2
+  - End
+  - Death3
   layers:
   - Default
   - TransparentFX

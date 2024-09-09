@@ -78,9 +78,29 @@ public class PlayerMovement : MonoBehaviour
             SceneManager.LoadScene(1);
         }
 
-        if(other.tag == "Win1")
+        if (other.tag == "Death2")
         {
             SceneManager.LoadScene(2);
+        }
+
+        if (other.tag == "Death3")
+        {
+            SceneManager.LoadScene(3);
+        }
+
+        if (other.tag == "Win1")
+        {
+            SceneManager.LoadScene(2);
+        }
+
+        if (other.tag == "Win2")
+        {
+            SceneManager.LoadScene(3);
+        }
+
+        if (other.tag == "End")
+        {
+            SceneManager.LoadScene(4);
         }
     }
 }
