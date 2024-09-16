@@ -16,6 +16,8 @@ TagManager:
   - Death2
   - End
   - Death3
+  - wack
+  - hand
   layers:
   - Default
   - TransparentFX
