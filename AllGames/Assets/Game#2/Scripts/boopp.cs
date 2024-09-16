@@ -14,7 +14,7 @@ public class boopp : MonoBehaviour
 
         if (Input.GetKeyDown("r"))
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
         }
     }
 
