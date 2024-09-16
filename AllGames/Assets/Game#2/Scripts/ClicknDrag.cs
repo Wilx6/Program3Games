@@ -7,6 +7,8 @@ public class ClicknDrag : MonoBehaviour
 
     Vector3 mousePostiton;
 
+    public GameObject TheHand;
+
     private Vector3 GetMousePos()
     {
         return Camera.main.WorldToScreenPoint(transform.position);
@@ -23,6 +25,14 @@ public class ClicknDrag : MonoBehaviour
     private void OnMouseDrag()
     {
         transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition - mousePostiton);
+    }
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag == "wack")
+        {
+            TheHand.SetActive(false);
+            Debug.Log("Deleted");
+        }
     }
 
 }
