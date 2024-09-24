@@ -18,6 +18,7 @@ TagManager:
   - Death3
   - wack
   - hand
+  - WorldObjectHolder
   layers:
   - Default
   - TransparentFX
@@ -29,7 +30,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - whatIsGround
   - 
   - 
   - 
