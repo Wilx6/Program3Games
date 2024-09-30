@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Game#3/Scenes/RobloxGame.unity
-    guid: f143aafc9ed58b6468c0c6379dc42750
+    path: Assets/Game#4/Scenes/Starting.unity
+    guid: 77c4da42728cc764a995a949f71a6d58
+  - enabled: 1
+    path: Assets/Game#4/Scenes/City.unity
+    guid: 6ddcca9fb97cbc941991b2027a7934b7
   m_configObjects: {}

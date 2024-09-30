@@ -19,6 +19,9 @@ TagManager:
   - wack
   - hand
   - WorldObjectHolder
+  - BluePill
+  - RedPill
+  - Builds
   layers:
   - Default
   - TransparentFX
