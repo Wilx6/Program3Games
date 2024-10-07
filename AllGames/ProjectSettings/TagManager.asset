@@ -22,6 +22,8 @@ TagManager:
   - BluePill
   - RedPill
   - Builds
+  - PinkPill
+  - YellowPill
   layers:
   - Default
   - TransparentFX

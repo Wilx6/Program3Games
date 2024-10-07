@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerMoventt : MonoBehaviour
 {
 
+    
+
     public float moveSpeed;
 
     public float groundDrag;
@@ -36,6 +38,8 @@ public class PlayerMoventt : MonoBehaviour
         rb.freezeRotation = true;
 
         readyToJump = true;
+
+        
     }
 
     private void Update()

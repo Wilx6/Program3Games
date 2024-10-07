@@ -49,6 +49,12 @@ public class Buildings : MonoBehaviour
             rb.AddTorque(-rotationDirection * launchRotation);
             StartCoroutine(DestroyStrongBuild());
         }
+
+        if (other.gameObject.tag == "WorldObjectHolder" && Powers.Shoot == true)
+        {
+            playerRenderer.material.color = Color.red;
+            StartCoroutine(DestroySpeedBuild());
+        }
     }
 
     IEnumerator DestroySpeedBuild()

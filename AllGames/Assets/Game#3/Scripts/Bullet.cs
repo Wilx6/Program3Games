@@ -26,6 +26,12 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject);
+        StartCoroutine(DestroySpeedBuild());
+    }
+
+    IEnumerator DestroySpeedBuild()
+    {
+        yield return new WaitForSeconds(.5f);
+        Destroy(this.gameObject);
     }
 }

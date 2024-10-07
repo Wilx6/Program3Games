@@ -7,9 +7,12 @@ using UnityEngine.SceneManagement;
 public class PlayersMove : MonoBehaviour
 {
 
+    public GameObject bullettt;
+
     public GameObject PLAYER;
     public bool Fast = false;
     public bool Strong = false;
+    public bool Shoot = false;
 
 
 
@@ -32,6 +35,8 @@ public class PlayersMove : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        bullettt.SetActive(false);
     }
 
     void Update()
@@ -84,6 +89,7 @@ public class PlayersMove : MonoBehaviour
             runSpeed = 100f;
             Destroy(other.gameObject);
             Destroy(GameObject.FindWithTag("RedPill"));
+            Destroy(GameObject.FindWithTag("YellowPill"));
             playerRenderer.material.color = Color.blue;
             Fast = true;
 
@@ -96,9 +102,22 @@ public class PlayersMove : MonoBehaviour
             runSpeed = 10f;
             Destroy(other.gameObject);
             Destroy(GameObject.FindWithTag("BluePill"));
+            Destroy(GameObject.FindWithTag("YellowPill"));
             playerRenderer.material.color = Color.red;
             Strong = true;
             
+        }
+
+        if (other.gameObject.tag == "YellowPill")
+        {
+            
+            Destroy(other.gameObject);
+            Destroy(GameObject.FindWithTag("BluePill"));
+            Destroy(GameObject.FindWithTag("RedPill"));
+            playerRenderer.material.color = Color.yellow;
+            bullettt.SetActive(true);
+            Shoot = true;
+
         }
 
     }
